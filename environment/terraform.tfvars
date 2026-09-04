@@ -3,6 +3,10 @@ resource_group = {
     name     = "dk_monday"
     location = "east asia"
   }
+  rg2 = {
+    name     = "dk_tuesday"
+    location = "east asia"
+  }
 }
 
 virtual_network = {
