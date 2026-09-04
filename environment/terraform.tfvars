@@ -7,7 +7,7 @@ resource_group = {
     name     = "dk_tuesday"
     location = "east asia"
   }
-   rg2 = {
+   rg3 = {
     name     = "dk_wednesday"
     location = "east asia"
   }
