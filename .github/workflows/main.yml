@@ -68,10 +68,10 @@ jobs:
       # ----------------------------------------------------------
       # 4. CHECKOV - IaC Security & Compliance
       # ----------------------------------------------------------
-      - name: Run Checkov
-        uses: bridgecrewio/checkov-action@v12
-        with:
-          directory: environment
+    #   - name: Run Checkov
+    #     uses: bridgecrewio/checkov-action@v12
+    #     with:
+    #       directory: environment
      
       - name: Azure Login
         run: |
@@ -115,12 +115,12 @@ jobs:
         working-directory: environment
 
     steps:
-    #   - name: Checkout code
-    #     uses: actions/checkout@v4
-    #   - name: Run Checkov
-    #     continue-on-error: true
-    #     run: |
-    #      checkov -d . --soft-fail
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run Checkov
+        continue-on-error: true
+        run: |
+         checkov -d . --soft-fail
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
